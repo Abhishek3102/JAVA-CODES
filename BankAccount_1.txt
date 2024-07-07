@@ -1,0 +1,59 @@
+abstract class BankAccount {
+    public abstract void withdraw();
+}
+
+class SavingsAccount extends BankAccount {
+    int withdraw;
+
+    public SavingsAccount(int withdraw) {
+        this.withdraw = withdraw;
+    }
+
+    public void withdraw() {
+
+
+        System.out.println("Money withdrawn from SavingsAccount is : " + withdraw);
+    }
+}
+
+class CheckingAccount extends BankAccount {
+    int withdraw;
+
+    public CheckingAccount(int withdraw) {
+
+        this.withdraw = withdraw;
+    }
+
+
+    public void withdraw() {
+
+        int withdraw = 675;
+        System.out.println("Money withdrawn from CheckingAccount is : " +withdraw);
+    }
+}
+
+class CurrentAccount extends BankAccount {
+    int withdraw;
+
+    public CurrentAccount(int withdraw) {
+
+        this.withdraw = withdraw;
+    }
+
+    public void withdraw() {
+        int withdraw = 767;
+
+        System.out.println("Money withdrawn from CurrentAccount is : " + withdraw);
+    }
+}
+
+class abstractClassSoundWaalaCode {
+    public static void main(String args[]) {
+        BankAccount s = new SavingsAccount(345);
+        s.withdraw();
+        s = new CheckingAccount(675);
+        s.withdraw();
+        s = new CurrentAccount(767);
+        s.withdraw();
+    }
+}
